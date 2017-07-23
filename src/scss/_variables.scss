@@ -1,0 +1,15 @@
+////
+/// Variables
+//
+
+$header-background-color: #25354d;
+$header-nav-background-color: #e2607a;
+$header-top-bottom-space: 15px;
+$header-max-top-bottom-space: 25px;
+$header-left-right-space: 15px;
+
+// Breakpoints
+$header-breakpoint: 769px;
+$logo-min-height: 24px;
+$logo-max-height: 32px;
+$btn-menu-size: $logo-min-height - 10px;

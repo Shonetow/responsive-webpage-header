@@ -1,0 +1,108 @@
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "variables";
+@import "global";
+
+////
+/// Header
+//
+
+.main-header {
+  background-color: $header-background-color;
+  padding: $header-top-bottom-space $header-left-right-space;
+  .logo {
+    float: left;
+    max-width: calc(100% - (32px + 15px));
+    height: $logo-min-height;
+    overflow: hidden;
+    > * {
+      line-height: $logo-min-height;
+      font-size: 26px;
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+    a {
+      text-decoration: none;
+      /* Image link fix*/
+      display: inline-block;
+      line-height: 0;
+    }
+    img {
+      height: $logo-min-height;
+      transition: height .3s;
+      max-width: 100%;
+    }
+  }
+  .navigation {
+    float: right;
+    max-width: $logo-min-height;
+    .btn-menu {
+      background: transparent url("../images/menu-btn.svg") no-repeat center;
+      background-size: $btn-menu-size;
+      display: block;
+      width: $logo-min-height;
+      height: $logo-min-height;
+      position: relative;
+      cursor: pointer;
+      text-indent: -9999px;
+    }
+    > .nav-links {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    &.open {
+      @include breakpoint(max-width 768px) {
+        > .nav-links {
+          background-color: $header-nav-background-color;
+          display: block;
+          position: absolute;
+          z-index: 999;
+          top: $header-top-bottom-space * 2 + $logo-min-height;
+          left: 0;
+          width: 100%;
+          > li {
+            > a {
+              padding: 10px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  @include breakpoint($header-breakpoint) {
+    padding: $header-max-top-bottom-space $header-left-right-space;
+    .logo {
+      max-width: none;
+      height: $logo-max-height;
+      > * {
+        line-height: $logo-max-height;
+        font-size: 32px;
+      }
+      img {
+        height: $logo-max-height;
+      }
+    }
+    .navigation {
+      max-width: none;
+      line-height: $logo-max-height;
+      .btn-menu {
+        display: none;
+      }
+      .nav-links {
+        display: block;
+        > li {
+          float: left;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
