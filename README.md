@@ -42,6 +42,29 @@ You can change SASS variables to adapt header to your needs.
 </header>
 ```
 
+### Fixed header
+
+You can fix a header to the top of the page. All you have to do is to add class `fixed` to header element. Header will shrink after you scroll 50px from the top.
+
+```html
+<header class="main-header fixed">
+    ...
+</header>
+```
+
+### Container
+
+If you need to put logo and navigation inside some kind of a container – just do it.
+
+```html
+<header class="main-header fixed">
+    <div class="your-container">
+        <div class="logo"> ... </div>
+        <div class="navigation"> ... </div>
+    </div>
+</header>
+```
+
 ## Contributing
 
 Yes please!

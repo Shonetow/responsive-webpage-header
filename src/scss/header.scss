@@ -1,24 +1,33 @@
 @import "variables";
 @import "global";
 
+* {
+  box-sizing: border-box;
+}
+
 ////
 /// Header
 //
 
 .main-header {
+
   background-color: $header-background-color;
-  padding: $header-top-bottom-space $header-left-right-space;
+  padding: $header-mobile-top-bottom-space $header-left-right-space;
+  transition: padding .3s;
+
   .logo {
     float: left;
     max-width: calc(100% - (32px + 15px));
-    height: $logo-min-height;
+    height: $logo-mobile-height;
+    transition: height .3s;
     overflow: hidden;
     > * {
-      line-height: $logo-min-height;
+      line-height: $logo-mobile-height;
       font-size: 26px;
       margin: 0;
       padding: 0;
       display: block;
+      transition: line-height .3s;
     }
     a {
       text-decoration: none;
@@ -27,20 +36,21 @@
       line-height: 0;
     }
     img {
-      height: $logo-min-height;
+      height: $logo-mobile-height;
       transition: height .3s;
       max-width: 100%;
     }
   }
+
   .navigation {
     float: right;
-    max-width: $logo-min-height;
+    max-width: $logo-mobile-height;
     .btn-menu {
       background: transparent url("../images/menu-btn.svg") no-repeat center;
       background-size: $btn-menu-size;
       display: block;
-      width: $logo-min-height;
-      height: $logo-min-height;
+      width: $logo-mobile-height;
+      height: $logo-mobile-height;
       position: relative;
       cursor: pointer;
       text-indent: -9999px;
@@ -58,40 +68,43 @@
           display: block;
           position: absolute;
           z-index: 999;
-          top: $header-top-bottom-space * 2 + $logo-min-height;
+          top: $header-mobile-top-bottom-space * 2 + $logo-mobile-height;
           left: 0;
           width: 100%;
           > li {
             > a {
-              padding: 10px;
+              padding: $header-left-right-space;
               display: block;
+              color: $header-nav-mobile-link-color;
             }
           }
         }
       }
     }
   }
+
   &::after {
     content: '';
     display: block;
     clear: both;
   }
+
   @media (min-width: $header-breakpoint) {
-    padding: $header-max-top-bottom-space $header-left-right-space;
+    padding: $header-desktop-top-bottom-space $header-left-right-space;
     .logo {
       max-width: none;
-      height: $logo-max-height;
+      height: $logo-desktop-height;
       > * {
-        line-height: $logo-max-height;
+        line-height: $logo-desktop-height;
         font-size: 32px;
       }
       img {
-        height: $logo-max-height;
+        height: $logo-desktop-height;
       }
     }
     .navigation {
       max-width: none;
-      line-height: $logo-max-height;
+      line-height: $logo-desktop-height;
       .btn-menu {
         display: none;
       }
@@ -100,8 +113,35 @@
         > li {
           float: left;
           margin-left: 15px;
+          a {
+            color: $header-nav-desktop-link-color;
+          }
         }
       }
     }
+    &.shrink {
+      padding-top: $header-desktop-top-bottom-space * .50;
+      padding-bottom: $header-desktop-top-bottom-space * .50;
+      .logo {
+        height: #{$logo-desktop-height * .75};
+        > * {
+          line-height: #{$logo-desktop-height * .75};
+        }
+        img {
+          height: #{$logo-desktop-height * .75};
+        }
+      }
+      .navigation {
+        line-height: #{$logo-desktop-height * .75};
+      }
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
   }
 }

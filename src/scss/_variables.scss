@@ -2,14 +2,24 @@
 /// Variables
 //
 
-$header-background-color: #25354d;
-$header-nav-background-color: #e2607a;
-$header-top-bottom-space: 15px;
-$header-max-top-bottom-space: 25px;
-$header-left-right-space: 15px;
+$header-background-color: #25354d !default;
 
-// Breakpoints
-$header-breakpoint: 769px;
-$logo-min-height: 24px;
-$logo-max-height: 32px;
-$btn-menu-size: $logo-min-height - 10px;
+$header-nav-background-color: #e2607a !default;
+
+$header-mobile-top-bottom-space: 15px !default;
+
+$header-desktop-top-bottom-space: 25px !default;
+
+$header-left-right-space: 15px !default;
+
+$header-nav-mobile-link-color: #ffffff !default;
+
+$header-nav-desktop-link-color: #ffffff !default;
+
+$header-breakpoint: 769px !default;
+
+$logo-mobile-height: 24px !default;
+
+$logo-desktop-height: 32px !default;
+
+$btn-menu-size: $logo-mobile-height - 10px !default;;

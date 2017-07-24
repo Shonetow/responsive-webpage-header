@@ -6,31 +6,98 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Responsive webpage header</title>
 	<link rel="stylesheet" href="/css/header.css">
+	<style>
+		.header-is-fixed {
+			padding-top: 100px;
+		}
+		main {
+			margin: 46px auto;
+			max-width: 500px;
+			padding: 15px;
+		}
+		.header-is-fixed main {
+			margin-top: 0;
+		}
+		p {
+			line-height: 1.6;
+		}
+		.msg {
+			display: none;
+		}
+		.header-is-fixed .msg {
+			display: inline-block;
+			color: #3cad3c;
+			margin-left: 10px;
+		 }
+		button {
+			font-family: inherit;
+			border: 0;
+			border-radius: 5px;
+			color: #ffffff;
+			font-size: 20px;
+			font-size: inherit;
+			background: #E2607A;
+			padding: 10px 20px 10px 20px;
+			text-decoration: none;
+		}
+
+		button:hover {
+			background: #bf4f65;
+			text-decoration: none;
+		}
+	</style>
 </head>
 <body>
 <header class="main-header">
-	<!-- Logo -->
-	<div class="logo">
-		<!--<h1><a href="#">ResponsiveHeader</a></h1>-->
-		<div><a href="#"><img src="/images/logo.svg" alt="ResponsiveHeader"></a></div>
-	</div>
+	<div class="container">
+		<!-- Logo -->
+		<div class="logo">
+			<!--<h1><a href="#">ResponsiveHeader</a></h1>-->
+			<div><a href="#"><img src="/images/logo.svg" alt="ResponsiveHeader"></a></div>
+		</div>
 
-	<!-- Navigation -->
-	<nav class="navigation">
-		<span class="btn-menu">Menu</span>
-		<ol class="nav-links">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Our work</a></li>
-			<li><a href="#">Contact</a></li>
-		</ol>
-	</nav>
+		<!-- Navigation -->
+		<nav class="navigation">
+			<span class="btn-menu">Menu</span>
+			<ol class="nav-links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Our work</a></li>
+				<li><a href="#">Contact</a></li>
+			</ol>
+		</nav>
+	</div>
 </header>
 
+<main>
+
+	<div>
+		<button onclick="toogleFixedHeader()">Toggle fixed Header</button><span class="msg">Fixed</span>
+	</div>
+
+	<p>
+		<a href="https://github.com/Shonetow/responsive-webpage-header">Project page</a>
+	</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam asperiores earum optio repellendus. A ab dolore eligendi eum excepturi impedit, ipsum, modi molestias neque obcaecati possimus reiciendis repudiandae similique temporibus veritatis! Accusamus adipisci at autem commodi consectetur consequatur excepturi explicabo fugiat illo impedit incidunt ipsa maiores maxime molestias nemo nobis odit perferendis quas quidem quis quod, repellat sunt tenetur totam vel voluptate voluptatem voluptatum! Assumenda commodi dignissimos earum eum incidunt officia placeat quibusdam ullam voluptas. Officiis, quasi qui. Ab amet aperiam assumenda consequuntur deleniti ea eveniet fugit id in incidunt ipsa ipsam iste nemo, nihil nostrum odit pariatur quisquam quod ratione rerum saepe</p>
+	<p>suscipit totam. Accusantium distinctio doloremque iure iusto? A adipisci aspernatur assumenda consectetur consequuntur culpa deserunt dignissimos dolor dolore doloremque ducimus eos est facilis illo ipsa ipsam laboriosam laborum laudantium magnam, magni maiores minus modi molestias odio optio pariatur praesentium quam quas qui quos recusandae sed tempora unde. Ad consequatur, corporis culpa, dignissimos distinctio eligendi esse est fugit harum, illo ipsa iste itaque iusto libero nisi obcaecati perferendis perspiciatis possimus provident quod saepe ullam unde voluptatibus. Aliquam amet animi architecto culpa delectus dignissimos ex, exercitationem illum, in iure maxime, nemo possimus quis repellendus saepe similique veritatis. Atque consequatur cum cumque cupiditate deleniti dolore ea</p>
+	<p>enim est illum in magni minima nobis omnis porro, quam quas quasi quidem quisquam sapiente temporibus ut voluptas voluptates. Deleniti, perspiciatis, ullam. Autem ea, ex. Aliquid aspernatur consectetur consequuntur corporis distinctio dolores error et ipsum laudantium minus necessitatibus nemo, non quisquam quo sed sint suscipit velit? Excepturi hic laboriosam quasi! Ab adipisci beatae ducimus ea, ex fugit harum ipsam ipsum laborum minus nesciunt quod reprehenderit repudiandae sed vel voluptates voluptatum. Aperiam atque autem eaque explicabo ipsa, ipsam iusto necessitatibus omnis perferendis quod, rerum sed sint sit soluta voluptatem. Adipisci assumenda beatae commodi debitis dignissimos dolorem ex harum minima officia pariatur perferendis quae quo quod, saepe sapiente suscipit velit</p>
+	<p>veniam vitae. Accusantium aliquid autem cupiditate earum est ipsa non, officiis quas quasi, ullam velit veniam veritatis vero. Eos illum ipsa odio quas quibusdam quisquam sunt tempore? Accusamus, asperiores deleniti error eveniet facere impedit iste minus necessitatibus non odit, similique sunt tempore vitae voluptate voluptatibus! Accusantium animi architecto cumque dolor earum, inventore iure laboriosam laborum libero necessitatibus praesentium provident quae, repellat sequi voluptate! Architecto aspernatur consectetur cum earum eos eum fugiat impedit iste, laudantium nobis nostrum possimus quam quibusdam quisquam, repellat saepe ullam? Blanditiis dicta, dolor eaque enim, eos et eveniet maiores molestias nam neque nobis, numquam obcaecati officia pariatur placeat qui ratione</p>
+	<p>reprehenderit rerum voluptas voluptates. Accusamus aliquam aliquid architecto, aut beatae consequuntur cum deleniti dignissimos dolor eaque eius eligendi enim, explicabo hic id in iste laboriosam laudantium, libero maxime nihil numquam officiis perferendis porro provident quae quaerat quia quis quisquam quod ratione reprehenderit repudiandae sed sequi tenetur ullam voluptate. Aliquam iure ratione saepe sapiente ullam voluptatem? Accusamus ad asperiores consectetur, delectus dolores ducimus error eveniet fugit hic ipsa ipsum, nesciunt nulla odit officia pariatur, perspiciatis quos totam veritatis. Dolores fuga officia temporibus vero.</p>
+</main>
+
 <script src="/js/header.js"></script>
+
+<script>
+  function toogleFixedHeader () {
+    var header = document.querySelector('.main-header')
+    header.classList.toggle('fixed')
+    document.body.classList.toggle('header-is-fixed')
+  }
+</script>
 </body>
 </html>
 
-	<title>Document</title>
+<title>Document</title>
 </head>
 <body>
