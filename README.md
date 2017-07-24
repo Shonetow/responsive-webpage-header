@@ -2,7 +2,7 @@
 
 A simple responsive webpage header template.
 
-[Demo](http://tired-can.surge.sh)
+[Demo](http://responsive-webpage-header.surge.sh)
 
 ## Usage
 
