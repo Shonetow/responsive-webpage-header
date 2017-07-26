@@ -1,19 +1,27 @@
 {
   "name": "responsive-webpage-header",
-  "version": "1.1.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "1.1.2",
+  "description": "A simple responsive webpage header template.",
+  "author": "Nenad Novkovic - Shonetow",
+  "homepage": "https://github.com/Shonetow/responsive-webpage-header",
+  "bugs": "https://github.com/Shonetow/responsive-webpage-header/issues",
+  "main": "src",
   "keywords": [
     "responsive",
     "webpage",
     "header",
-    "sass"
+    "sass",
+    "navigation",
+    "navbar"
   ],
-  "author": "Nenad Novkovic - Shonetow",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shonetow/responsive-webpage-header"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
     "gulp": "^3.9.1",
