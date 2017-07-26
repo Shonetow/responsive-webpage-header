@@ -4,6 +4,12 @@ A simple responsive webpage header template.
 
 [Demo](http://responsive-webpage-header.surge.sh)
 
+## Install
+
+```
+npm install responsive-webpage-header
+```
+
 ## Usage
 
 Use _header.css_ file from _dist_ folder or import _header.scss_ into your .scss file.
